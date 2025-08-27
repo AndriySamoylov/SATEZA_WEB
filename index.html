@@ -1,0 +1,385 @@
+<html>
+    <head>
+        <title>SATEZA SYSTEMS</title>
+        <link rel="icon" href="C:\Users\Andriy\Documents\SATEZAWEB/SA.jpg" type="image/jpeg">
+        <style>
+            body{
+                margin: 0;
+                background-color: black;
+                font-family: Arial, Helvetica, sans-serif;
+                overflow: hidden;
+            }
+            .navbar {
+                display: flex;
+                justify-content: center;
+                text-align: center;
+                gap: 30px;
+                padding: 15px 30px;
+                border-bottom: 1px solid lightgray;
+                height: 25px;
+                margin-left: 4000px;
+                transition: all 2s ease;
+            }
+            .navbar a {
+                color: white;
+                text-decoration: none;
+                font-size: 20px;
+                transition: color 0.3s;
+            }
+            .navbar a:hover {
+                color: darkgray;
+            }
+            .navbar.navbarshifted {
+                margin-left: 0;
+            }
+            .sep {
+                width: 1px;
+                height: 20px;
+                background-color: lightgray;
+            }
+            video {
+                width: 94%;
+                height: auto;
+                object-fit: contain;
+            }
+            .intro{
+                overflow: hidden;
+                display: flex;
+                justify-content: center;
+            }
+            body.hide-scrollbar::-webkit-scrollbar {
+                display: none;
+            }
+            .B1 {
+                background-color: white;
+                color: black;
+                text-align: center;
+                font-size: 50px;
+                font-weight: bold;
+                padding: 50px 0;
+            }
+            .S1 {
+                background-color: rgb(255, 255, 255);
+                border-radius: 40px;
+                max-width: 1600px;
+                width: 90%;
+                margin: 50px auto;
+                margin-top: 150px;
+                padding: 20px;
+                justify-content: center;
+            }
+            .SC1 {
+                display: flex;
+                margin: 40px;
+                gap: 20px
+            }
+            .S1 .SC1 img {
+                max-width: 37%;
+                height: 37%;
+                border-radius: 30px;
+                margin-left: 18px;
+            }
+            .S1 .SC1 p {
+                margin-left: 180px;
+                font-size: 80px;
+                font-weight: bold;
+                color: rgb(0, 0, 0);
+            }
+            .ETB1 {
+                display: flex;
+            }
+            .BS1 {
+                position: relative;
+                display: inline-block;
+            }
+            .MB1 {
+                padding:12px 24px;
+                font-size: 30px;
+                background-color: rgb(255, 255, 255);
+                color: rgb(0, 0, 0);
+                border-color: black;
+                border-radius: 60px;
+                border-style: groove;
+                cursor: pointer;
+                transition: opacity 0.3s ease;
+                position: relative;
+                margin-left: 50px;
+                margin-top: 120px;
+                text-align: center;
+                justify-content: center;
+                width: 300px;
+                height: 60px;
+            }
+            .SB1 {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                position: absolute;
+                top: 0;
+                left: 0;
+                opacity: 0;
+                margin-left: 50px;
+                gap: 15px;
+            }
+            .SB1 button {
+                font-size: 30px;
+                margin-left: 50px;
+                text-align: center;
+                justify-content: center;
+                background: black;
+                color: white;
+                border-radius: 30px;
+                border: none;
+                width: 300px;
+                height: 60px;
+                margin: 5px 0;
+            }
+            .SB1 button:hover {
+                color: rgb(146, 146, 146);
+                width: 315px;
+                height: 63px;
+                border-radius: 31.5px;
+                font-size: 31.5px;
+            }
+            .SB1.show {
+                opacity: 1;
+                pointer-events:auto
+            }
+            .SB1.show .up {
+                transform: translateY(-10px)
+            }
+            .SB1.show .down {
+                transform: translateY(10px);
+            }
+            .hidden {
+                opacity: 0;
+                pointer-events: none;
+            }
+            .B2 {
+                background-color: rgb(0, 0, 0);
+                color: rgb(255, 255, 255);
+                text-align: center;
+                font-size: 50px;
+                font-weight: bold;
+                padding: 50px 0;
+                margin-top: 150px;
+            }
+            .SC2 {
+                display: flex;
+                margin: 40px;
+            }
+            .VID1 {
+                border-radius: 30px;
+                width: 40%;
+                height: auto;
+                margin-left: 18px;
+            }
+            .TB2 {
+                margin-left: 140px;
+            }
+            .SIPB {
+                margin-left: 140px;
+                margin-top: 100px;
+                justify-content: center;
+                display: flex;
+            }
+            .SIPB button {
+                color: black;
+                background-color: white;
+                border-color: black;
+                font-size: 30px;
+                border-radius: 30px;
+                border-style: groove;
+                width: 300px;
+                height: 60px;
+                font-weight: bold;
+                transition: all 0.3s ease;
+                text-align: center;
+            }
+            .SIPB button:hover {
+                background-color: black;
+                color: white;
+                border-color: black;
+                border-radius: 33px;
+                width: 330px;
+                height: 66px;
+            }
+            .SE {
+                color: white;
+            }
+            .LB {
+                justify-content: center;
+                display: flex;
+                margin-bottom: 50px;
+                margin-top: 20px;
+            }
+            .LB button {
+                width: 200px;
+                color: white;
+                background-color: black;
+                border-color: white;
+                border-style: groove;
+                border-radius: 20px;
+                height: 40px;
+                font-size: 10px;
+                font-weight: bold;
+                transition: all 0.5s ease;
+            }
+            .LB button:hover {
+                width: 250px;
+                height: 50px;
+                font-size: 12.5px;
+                border-radius: 25px;
+                background-color: white;
+                color: black;
+            }
+            .BON {
+                display: flex;
+                justify-content: center;
+                font-size: 15px;
+                color: rgb(155, 155, 155);
+                gap: 200px;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="navbar" id="BTTTMAIN">
+                <a href="FGORILLA.html">Free Money</a>
+                <span class="sep"></span>
+                <a href="#PRJSECTION">Projects</a>
+                <span class="sep"></span>
+                <a href="index.html">Home</a>
+                <span class="sep"></span>
+                <a href="#PRDSECTION">Products</a>
+                <span class="sep"></span>
+                <a href="AUS.html">About us</a>
+            </div>
+        </header>
+        <main>
+            <div class="intro">
+                <video id="INTRO" autoplay muted>
+                    <source src="INTR.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="B1">
+                <span id="PRDSECTION">OUR PRODUCTS</span>
+            </div>
+            <section class="S1">
+                <div class="SC1">
+                    <img src="SABAV5R.jpg" type="jpeg">
+                    <div class="TBS1">
+                    <p>SABA INFO V.1.5</p>
+                        <div class="ETB1">
+                            <p style="font-size: 25px; margin-top: 100px;">The first SABA INFO <br> version that was <br> released for public</p>
+                            <div class="BS1">
+                                <button class="MB1"><b>
+                                    Explore
+                                </b></button>
+                                <div class="SB1">
+                                    <a href="PRR.html"><button class="UP1" style="transition: all 0.3s ease;" >Download</button></a>
+                                    <a href="SBV5.html"><button style="transition: all 0.3s ease;">Read more</button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="B2">
+                <span id="PRJSECTION">OUR PROJECTS</span>
+            </div>
+            <section class="S1">
+                <div class="SC2">
+                    <video class="VID1" muted autoplay loop>
+                        <source src="0811.mp4" type="video/mp4">
+                    </video>
+                    <div class="TB2">
+                        <p style="font-size: 80px; font-weight: bold;">SABA INFO V.1.6</p>
+                        <p style="font-size: 25px; font-weight: bold; max-width: 500px;">
+                            SABA INFO version 1.6 will be the new version with new modern interface and optimized update system</p>
+                        <div class="SIPB">
+                            <a href="PRR.html"><button>
+                                Explore
+                            </button></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+            <div class="LB">
+                <a href="#BTTTMAIN"><button>BACK TO THE TOP</button></a>
+            </div>
+            <div class="BON">
+                <p style="margin-bottom: 20px;">SAMOYLOV</p>
+                <p style="margin-bottom: 20px;">TERECHOV</p>
+                <p style="margin-bottom: 20px;">ZACHAROV</p>
+            </div>
+    </body>
+<script>
+(function () {
+  const video  = document.getElementById("INTRO");
+  const navbar = document.getElementById("BTTTMAIN");
+  const mainBtn = document.querySelector(".MB1");
+  const subBtns = document.querySelector(".SB1");
+  const STORAGE_KEY = "introVideoFinishedTime";
+  const RESET_MS = 60 * 60 * 1000;
+
+  setTimeout(() => {
+    navbar.classList.add("navbarshifted");
+  }, 17000);
+
+  function applyEndedState() {
+    document.body.style.overflow = "auto";
+    document.body.classList.add("hide-scrollbar");
+    navbar.classList.add("navbarshifted");
+  }
+
+  const lastSeen = localStorage.getItem(STORAGE_KEY);
+  const now = Date.now();
+
+  if (!lastSeen || now - lastSeen > RESET_MS) {
+    video.addEventListener("ended", () => {
+      applyEndedState();
+      localStorage.setItem(STORAGE_KEY, Date.now());
+    }, { once: true });
+  } else {
+    const seekToEnd = () => {
+      try {
+        if (isFinite(video.duration) && video.duration > 0) {
+          const epsilon = 0.05;
+          video.currentTime = Math.max(0, video.duration - epsilon);
+        }
+      } catch (e) { }
+      video.pause();
+      video.removeAttribute("autoplay");
+      applyEndedState();
+    };
+
+    if (video.readyState >= 1) {
+      seekToEnd();
+    } else {
+      video.addEventListener("loadedmetadata", seekToEnd, { once: true });
+    }
+  }
+
+  if (mainBtn && subBtns) {
+    mainBtn.addEventListener("mouseenter", () => {
+      mainBtn.classList.add("hidden");
+      subBtns.classList.add("show");
+    });
+    subBtns.addEventListener("mouseleave", () => {
+      subBtns.classList.remove("show");
+      mainBtn.classList.remove("hidden");
+    });
+  }
+})();
+(function() {
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
+    if (isMobile) {
+        window.location.href = "PRRMOB.html"; 
+    }
+})();
+
+</script>
+</html>
